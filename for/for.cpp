@@ -15,9 +15,7 @@ int main()
 {
 
     using namespace std;
-
-    for (int)
-    std::cout << pow(2, 4) << std::endl;
+    std::cout << pow(2, 4) << std::endl; // hahaha
 
     return 0;
 }
