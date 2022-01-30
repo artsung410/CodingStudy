@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RGB.h"
-#include "Vector2.h"
-#include "Vector3.h"
-#include "Colors.h"
+#include "RGB.h" //색상을 결정하는 3가지 숫자
+#include "Vector2.h" //2차원에서의 좌표를 표현함
+#include "Vector3.h" // 3D ""
+#include "Colors.h" //
 #include "Timer.h"
 #include "DrawFunctions.h"
 
@@ -23,10 +23,10 @@ namespace jm
 	class Game2D
 	{
 	private:
-		int width = 640;
+		int width = 640; //그래픽 창의 가로 세로 해상도
 		int height = 480;
 
-		GLFWwindow* glfw_window = nullptr;
+		GLFWwindow* glfw_window = nullptr; // 창에 대한 포인터
 
 		Timer timer;
 
@@ -35,7 +35,7 @@ namespace jm
 		// control options
 		std::map<int, bool> key_status;  // key_id, is_pressed
 		std::map<int, bool> mbtn_status; // mouse_button_id, is_pressed
-		bool draw_grid = false;
+		bool draw_grid = true;
 
 	public:
 		Game2D()
@@ -53,7 +53,7 @@ namespace jm
 
 		bool isKeyPressed(const int& key);
 		bool isKeyReleased(const int & key);
-		bool isKeyPressedAndReleased(const int& key);
+		bool isKeyPressedAndReleased(const int& key); //사용자가 키를 눌렀다가 땠는지 확인한다.
 
 		bool isMouseButtonPressed(const int& mbtn);
 		bool isMouseButtonReleased(const int& mbtn);
@@ -61,11 +61,11 @@ namespace jm
 
 		vec2 getCursorPos(const bool& screen_coordinates = true);
 
-		float getTimeStep();
+		float getTimeStep(); 
 
 		void drawGrid();
 
-		void run();
+		void run(); // ★중요
 
 		virtual void update() 
 		{

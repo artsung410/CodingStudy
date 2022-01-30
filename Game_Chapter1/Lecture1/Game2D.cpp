@@ -220,14 +220,14 @@ namespace jm
 		if (glfw_window == nullptr)
 			init("This is my digital canvas!", 1280, 960, false); // initialize with default setting
 
-		while (!glfwWindowShouldClose(glfw_window))// main loop
+		while (!glfwWindowShouldClose(glfw_window))// ★중요 main loop
 		{
 			if (isKeyPressed(GLFW_KEY_ESCAPE)) {
-				std::cout << "ESC key ends main loop" << std::endl;
+				std::cout << "ESC key ends main loop" << std::endl; //ESC키 누르면 종료해라.
 				break;
 			}
 
-			timer.start();
+			timer.start(); 
 
 			// pre draw
 			glfwMakeContextCurrent(glfw_window);
