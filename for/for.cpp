@@ -1,5 +1,4 @@
 #include <iostream>
-
 //using namespace std;
 
 int pow(int base, int exponent)
@@ -15,7 +14,7 @@ int main()
 {
 
     using namespace std;
-    std::cout << pow(2, 4) << std::endl; // hahaha
+    std::cout << pow(2, 4) << std::endl; // hahaha // hahaha2
 
     return 0;
 }
