@@ -7,7 +7,7 @@ namespace jm
 	class MyTank
 	{
 	public:
-		vec2 center = vec2(0.0f, 0.0f);
+		vec2 center = vec2(0.0f, 0.0f); //탱크의 현재 위치를 저장
 		//vec2 direction = vec2(1.0f, 0.0f, 0.0f);
 
 		void draw()
